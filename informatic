@@ -1,0 +1,61 @@
+Program Informatic;
+uses Graphabc;
+begin
+  //Параметры холста.
+  SetWindowWidth(1000);
+  SetWindowHeight(900);
+  
+  //Дом.
+  SetPenWidth(4);
+  SetPenColor(clBlue);
+  SetBrushColor(clBlue);
+  Rectangle(250,600,600,400);
+  FillRect(250,600,600,400);
+  SetPenWidth(2);
+  Line(425, 450, 425, 550);
+  Line(350, 500, 500, 500);  
+  Line(249,399, 425, 300);
+  Line(425,300, 599, 399);
+  FloodFill(429, 305, clBlue);
+  
+  //Окно.
+  SetBrushColor(clWhite);
+  SetPenWidth(2);
+  Rectangle(350,450,500,550);  
+  FillRect(350,450,500,550);
+
+  
+  //Дерево.
+  SetPenColor(clGreen);
+  Circle(160,400, 70);
+  FloodFill(164, 405, clGreen);
+  SetBrushColor(clBrown);
+  FillRect(150,600,170,400);
+  SetPenColor(clBrown);
+  Rectangle(150,600,170,400);
+  
+  //Машина.
+  RoundRect(200, 700, 600, 750, 20, 20);                     
+  FloodFill(400, 720, clNavy);
+  Circle(290, 750, 30);                                      
+  FloodFill(300, 760, clblack);
+  Circle(510, 750, 30);                                      
+  FloodFill(520, 760, clblack);
+   SetPenWidth(3);
+    Line(300, 700, 340, 650);
+    Line(340, 650, 470, 650);
+    Line(470, 650, 510, 700);
+    Line(405, 650, 405, 750);
+    Line(510, 700, 510, 720);
+    Line(300, 700, 300, 720);
+    Line(380, 710, 390, 710);
+    Line(480, 710, 490, 710);
+    Line(300, 700, 510, 700);
+    SetPenColor(clgray);                                  
+    SetPenWidth(15);                                       
+    Circle(510, 750, 10);                                 
+    Circle(290, 750, 10);
+    
+    //Сохряняем изображение
+    SaveWindow('Project.jpg');
+end.
